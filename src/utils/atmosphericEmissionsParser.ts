@@ -273,7 +273,7 @@ export const parseAtmosphericEmissionsExcel = async (file: File): Promise<ParseR
       warnings,
     };
   } catch (error) {
-    errors.push("Failed to parse Excel file. Please ensure it's a valid .xlsx or .xls file.");
+    errors.push("Falla al analizar el archivo de excel, por favor asegurarse de que es un archivo valido.");
     return { data: null, errors, warnings };
   }
 };

@@ -8,10 +8,10 @@ import {
 } from "recharts";
 
 const data = [
-  { name: "Gasoline", value: 35, color: "hsl(var(--chart-gasoline))" },
+  { name: "Gasolina", value: 35, color: "hsl(var(--chart-gasoline))" },
   { name: "Diesel", value: 28, color: "hsl(var(--chart-diesel))" },
-  { name: "Natural Gas", value: 22, color: "hsl(var(--chart-natural-gas))" },
-  { name: "Electricity", value: 15, color: "hsl(var(--chart-electricity))" },
+  { name: "Gas Natural", value: 22, color: "hsl(var(--chart-natural-gas))" },
+  { name: "Electricidad", value: 15, color: "hsl(var(--chart-electricity))" },
 ];
 
 export function FuelTypePieChart() {

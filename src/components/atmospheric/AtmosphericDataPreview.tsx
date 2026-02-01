@@ -49,7 +49,7 @@ export function AtmosphericDataPreview({
           </span>
           {hasErrors && (
             <span className="text-sm text-destructive font-medium">
-              ⚠️ Some records have errors (highlighted in red)
+              ⚠️ Algunos registros tienen errores (Subrayados en rojo)
             </span>
           )}
         </div>
@@ -73,14 +73,14 @@ export function AtmosphericDataPreview({
             <Table>
               <TableHeader>
                 <TableRow className="bg-primary">
-                  <TableHead className="text-primary-foreground font-semibold">Equipment Type</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold">Fuel</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">Annual Consumption</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">Operating Hours</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold">Estimation Method</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">CO₂ Emissions</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">CH₄ Emissions</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">N₂O Emissions</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Tipo de Equipo</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Combustible</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">Consumo anual</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">Horas operativas</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Metodo de estimacion</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">CO₂ </TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">CH₄ </TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">N₂O </TableHead>
                   <TableHead className="w-10"></TableHead>
                 </TableRow>
               </TableHeader>
@@ -185,11 +185,11 @@ export function AtmosphericDataPreview({
             <Table>
               <TableHeader>
                 <TableRow className="bg-primary">
-                  <TableHead className="text-primary-foreground font-semibold">Vehicle Type</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold">Fuel</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">Annual Consumption</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold">Calculation Method</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">GHG Emissions</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Tipo de Vehiculo</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Combustible</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">econsumo anual</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Método de cálculo</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">Emisiones GyGEI</TableHead>
                   <TableHead className="w-10"></TableHead>
                 </TableRow>
               </TableHeader>
@@ -260,10 +260,10 @@ export function AtmosphericDataPreview({
             <Table>
               <TableHeader>
                 <TableRow className="bg-primary">
-                  <TableHead className="text-primary-foreground font-semibold">Gas Type</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold">Source</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold text-right">Estimated Quantity</TableHead>
-                  <TableHead className="text-primary-foreground font-semibold">Methodology</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Tipo de Gasolina</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Fuente</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold text-right">CAntidad estimada</TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">Metodologia</TableHead>
                   <TableHead className="w-10"></TableHead>
                 </TableRow>
               </TableHeader>

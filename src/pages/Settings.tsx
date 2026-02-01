@@ -37,16 +37,16 @@ const Settings = () => {
 
   const handleSaveOrg = () => {
     toast({
-      title: "Settings saved",
-      description: "Organization profile has been updated",
+      title: "Ajustes Guardados",
+      description: "El perfil de la organización ha sido guardado.",
     });
   };
 
   const handleSaveFactors = () => {
     setEditingFactor(null);
     toast({
-      title: "Emission factors saved",
-      description: "Updated emission factors will apply to new calculations",
+      title: "Factores de emisión guardados",
+      description: "Los factores actualizados de las emisiones se aplicaran a los nuevos cálculos",
     });
   };
 
@@ -59,9 +59,9 @@ const Settings = () => {
   return (
     <div className="animate-fade-in max-w-4xl">
       <div className="page-header">
-        <h1 className="page-title">Settings</h1>
+        <h1 className="page-title">Ajustes</h1>
         <p className="page-description">
-          Manage organization profile and emission factors
+          Modificar el perfil de la organización y factores de emisión
         </p>
       </div>
 
@@ -72,16 +72,16 @@ const Settings = () => {
             <Building2 className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="font-semibold">Organization Profile</h2>
+            <h2 className="font-semibold">Perfil de la organización</h2>
             <p className="text-sm text-muted-foreground">
-              Your organization's basic information
+              Información básica de tu organización
             </p>
           </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           <div className="space-y-2">
-            <Label htmlFor="orgName">Organization Name</Label>
+            <Label htmlFor="orgName">Nombre de la organización</Label>
             <Input
               id="orgName"
               value={orgName}
@@ -89,7 +89,7 @@ const Settings = () => {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="orgId">Organization ID</Label>
+            <Label htmlFor="orgId">ID de Organización</Label>
             <Input
               id="orgId"
               value={orgId}
@@ -103,14 +103,14 @@ const Settings = () => {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                <SelectItem value="energy">Energy & Utilities</SelectItem>
-                <SelectItem value="transport">Transportation</SelectItem>
-                <SelectItem value="construction">Construction</SelectItem>
-                <SelectItem value="agriculture">Agriculture</SelectItem>
-                <SelectItem value="services">Professional Services</SelectItem>
-                <SelectItem value="retail">Retail & Commerce</SelectItem>
-                <SelectItem value="healthcare">Healthcare</SelectItem>
+                <SelectItem value="manufacturing">Manufactura</SelectItem>
+                <SelectItem value="energy">Energía y Utilidads</SelectItem>
+                <SelectItem value="transport">Transporte</SelectItem>
+                <SelectItem value="construction">Construcción</SelectItem>
+                <SelectItem value="agriculture">Agricultura</SelectItem>
+                <SelectItem value="services">Servicios profesionales</SelectItem>
+                <SelectItem value="retail">Minorista y comercio</SelectItem>
+                <SelectItem value="healthcare">Cuidado de la salud</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -119,7 +119,7 @@ const Settings = () => {
         <div className="mt-6 flex justify-end">
           <Button onClick={handleSaveOrg}>
             <Save className="h-4 w-4 mr-2" />
-            Save Changes
+            Guardar cambios
           </Button>
         </div>
       </div>
@@ -130,13 +130,13 @@ const Settings = () => {
           <div>
             <h2 className="font-semibold">Emission Factors</h2>
             <p className="text-sm text-muted-foreground">
-              Configure emission factors for each fuel type
+              Configurar factores de emisión por cada tipo  de combustible
             </p>
           </div>
           {editingFactor && (
             <Button onClick={handleSaveFactors}>
               <Save className="h-4 w-4 mr-2" />
-              Save All
+              Guardar todo
             </Button>
           )}
         </div>
@@ -145,9 +145,9 @@ const Settings = () => {
           <thead>
             <tr>
               <th>Fuel Type</th>
-              <th className="text-right">CO₂ Factor (kg/unit)</th>
-              <th className="text-right">CH₄ Factor (kg/unit)</th>
-              <th className="text-right">N₂O Factor (kg/unit)</th>
+              <th className="text-right">CO₂ (kg/unit)</th>
+              <th className="text-right">CH₄ (kg/unit)</th>
+              <th className="text-right">N₂O (kg/unit)</th>
               <th className="w-20"></th>
             </tr>
           </thead>

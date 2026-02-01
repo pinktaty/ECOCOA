@@ -8,9 +8,9 @@ const Dashboard = () => {
   return (
     <div className="animate-fade-in">
       <div className="page-header">
-        <h1 className="page-title">Emissions Dashboard</h1>
+        <h1 className="page-title">Panel de Emsiones</h1>
         <p className="page-description">
-          Overview of your organization's greenhouse gas emissions
+          Descripción general de las emisiones de gases de efecto invernadero de su organización          
         </p>
       </div>
 

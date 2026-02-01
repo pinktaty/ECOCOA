@@ -5,32 +5,32 @@ const activities = [
   {
     id: 1,
     type: "upload",
-    title: "Data uploaded",
-    description: "Q4 2024 consumption data - 156 records",
-    time: "2 hours ago",
+    title: "Datos subidos",
+    description: "Datos de consumo del cuarto trimestre de 2024: 156 registros",
+    time: "Hace 2 horas",
     icon: FileSpreadsheet,
   },
   {
     id: 2,
     type: "calculation",
-    title: "Emissions calculated",
-    description: "4,285 tonnes CO₂e total emissions",
-    time: "2 hours ago",
+    title: "Cálculo de emisiones",
+    description: "4,285 toneladas de CO₂e totales",
+    time: "Hace 2 horas",
     icon: Calculator,
   },
   {
     id: 3,
     type: "report",
-    title: "Report generated",
-    description: "Annual GHG Inventory 2024",
-    time: "1 day ago",
+    title: "Reporte generado",
+    description: "Inventario Anual de GEI 2024",
+    time: "Hace 1 día",
     icon: FileText,
   },
   {
     id: 4,
     type: "upload",
-    title: "Data uploaded",
-    description: "Q3 2024 consumption data - 142 records",
+    title: "Datos subidos",
+    description: "Datos de consumo del tercer trimestre de 2024: 142 registros",
     time: "5 days ago",
     icon: FileSpreadsheet,
   },
@@ -39,7 +39,7 @@ const activities = [
 export function RecentActivity() {
   return (
     <div className="chart-container animate-slide-up">
-      <h3 className="text-lg font-semibold mb-6">Recent Activity</h3>
+      <h3 className="text-lg font-semibold mb-6">Actividad Reciente</h3>
       <div className="space-y-4">
         {activities.map((activity) => (
           <div

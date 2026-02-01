@@ -136,7 +136,7 @@ const UploadData = () => {
         });
       }
     } catch (error) {
-      setErrors(["Failed to parse Excel file. Please ensure it's a valid .xlsx or .xls file."]);
+      setErrors(["Error analizando el excel. Por favor asegurarse que el documento es un .xlsx o .xls valido."]);
     }
 
     setIsProcessing(false);
@@ -151,7 +151,7 @@ const UploadData = () => {
       if (file && (file.name.endsWith(".xlsx") || file.name.endsWith(".xls"))) {
         processFile(file);
       } else {
-        setErrors(["Please upload a valid Excel file (.xlsx or .xls)"]);
+        setErrors(["Favor de subir un archivo válido de Excel (.xlsx o .xls)"]);
       }
     },
     [processFile]
@@ -179,7 +179,7 @@ const UploadData = () => {
   const saveToDatabase = () => {
     toast({
       title: "Data saved",
-      description: `${records.length} records saved to database`,
+      description: `${records.length} registros guardados en la base de datos`,
     });
   };
 
@@ -188,7 +188,7 @@ const UploadData = () => {
       <div className="page-header">
         <h1 className="page-title">Upload Data</h1>
         <p className="page-description">
-          Upload Excel files with consumption data to calculate emissions
+          Subir Archivos de excel con datos de consumo para calcular emisiones.
         </p>
       </div>
 
@@ -215,7 +215,7 @@ const UploadData = () => {
           {isProcessing ? "Processing..." : "Drop your Excel file here"}
         </p>
         <p className="text-sm text-muted-foreground mb-4">
-          or click to browse your files
+          O click para buscar tus archivos
         </p>
         <p className="text-xs text-muted-foreground">
           Required columns: {requiredColumns.join(", ")}
@@ -227,7 +227,7 @@ const UploadData = () => {
         <div className="mb-6 rounded-lg border border-destructive/50 bg-destructive/5 p-4">
           <div className="flex items-center gap-2 text-destructive mb-2">
             <AlertCircle className="h-5 w-5" />
-            <span className="font-medium">Validation Errors</span>
+            <span className="font-medium">Validación de errores</span>
           </div>
           <ul className="list-disc list-inside text-sm text-destructive/90 space-y-1">
             {errors.map((error, i) => (
@@ -243,7 +243,7 @@ const UploadData = () => {
           <div className="flex items-center justify-between border-b px-6 py-4">
             <div className="flex items-center gap-2 text-success">
               <CheckCircle className="h-5 w-5" />
-              <span className="font-medium">{records.length} records loaded</span>
+              <span className="font-medium">{records.length} registros cargados</span>
             </div>
             <div className="flex gap-3">
               <Button variant="outline" onClick={clearAll}>
@@ -260,12 +260,12 @@ const UploadData = () => {
             <table className="data-table">
               <thead>
                 <tr>
-                  <th>Date</th>
+                  <th>Fecha</th>
                   <th>Sector</th>
-                  <th>Activity</th>
-                  <th>Fuel Type</th>
-                  <th>Volume</th>
-                  <th>Unit</th>
+                  <th>Actividad</th>
+                  <th>Tipo de combustible</th>
+                  <th>Volumen</th>
+                  <th>Unidad</th>
                   <th className="text-right">CO₂ (t)</th>
                   <th className="text-right">CH₄ (kg)</th>
                   <th className="text-right">N₂O (kg)</th>
@@ -310,7 +310,7 @@ const UploadData = () => {
 
           {records.length > 10 && (
             <div className="border-t px-6 py-3 text-sm text-muted-foreground">
-              Showing 10 of {records.length} records
+              Mostrando 10 de {records.length} registros
             </div>
           )}
         </div>

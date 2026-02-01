@@ -12,12 +12,12 @@ import {
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: LayoutDashboard },
-  { name: "Upload Data", href: "/upload", icon: Upload },
-  { name: "Upload Atmospheric", href: "/upload-atmospheric", icon: Wind },
-  { name: "Reports", href: "/reports", icon: FileText },
-  { name: "Atmospheric Reports", href: "/atmospheric-reports", icon: BarChart3 },
-  { name: "Settings", href: "/settings", icon: Settings },
+  { name: "Panel de control", href: "/", icon: LayoutDashboard },
+  { name: "Subir datos", href: "/upload", icon: Upload },
+  { name: "Subir datos atmosfericos", href: "/upload-atmospheric", icon: Wind },
+  { name: "Reportes", href: "/reports", icon: FileText },
+  { name: "Reportes atmosfericos", href: "/atmospheric-reports", icon: BarChart3 },
+  { name: "Ajustes", href: "/settings", icon: Settings },
 ];
 
 export function AppSidebar() {
@@ -33,9 +33,9 @@ export function AppSidebar() {
           </div>
           <div>
             <h1 className="text-base font-semibold text-sidebar-foreground">
-              EmissionTrack
+              Pista de emisiones
             </h1>
-            <p className="text-xs text-sidebar-foreground/60">GHG Reporting</p>
+            <p className="text-xs text-sidebar-foreground/60">Reporte GyGEI</p>
           </div>
         </div>
 
@@ -67,10 +67,10 @@ export function AppSidebar() {
             </div>
             <div className="flex-1 min-w-0">
               <p className="truncate text-sm font-medium text-sidebar-foreground">
-                Acme Corp
+                Telcel
               </p>
               <p className="truncate text-xs text-sidebar-foreground/60">
-                demo@acme.com
+                Aldo@Telcel.com
               </p>
             </div>
             <button className="rounded-lg p-1.5 text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors">

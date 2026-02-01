@@ -39,7 +39,7 @@ export function StatCard({
                 trend.isPositive ? "text-success" : "text-destructive"
               )}
             >
-              {trend.isPositive ? "↓" : "↑"} {Math.abs(trend.value)}% from last month
+              {trend.isPositive ? "↓" : "↑"} {Math.abs(trend.value)}% del mes pasado
             </p>
           )}
         </div>

@@ -21,7 +21,7 @@ interface Report {
 const mockReports: Report[] = [
   {
     id: "1",
-    name: "Annual GHG Inventory 2024",
+    name: "Inventario anual de GyGei 2024",
     dateFrom: "2024-01-01",
     dateTo: "2024-12-31",
     createdAt: "2024-12-15",
@@ -33,7 +33,7 @@ const mockReports: Report[] = [
   },
   {
     id: "2",
-    name: "Q4 2024 Emissions Report",
+    name: "Q4 2024 Reporte de Emisiones",
     dateFrom: "2024-10-01",
     dateTo: "2024-12-31",
     createdAt: "2025-01-02",
@@ -45,7 +45,7 @@ const mockReports: Report[] = [
   },
   {
     id: "3",
-    name: "Q1 2025 Emissions Report",
+    name: "Q1 2025 Reporte de Emisiones",
     dateFrom: "2025-01-01",
     dateTo: "2025-03-31",
     createdAt: "2025-01-28",
@@ -70,7 +70,7 @@ const Reports = () => {
     
     doc.setFontSize(10);
     doc.setTextColor(100);
-    doc.text("Greenhouse Gas Emissions Report", 20, 28);
+    doc.text("Reporte de GyGEI", 20, 28);
 
     // Organization Info
     doc.setFontSize(12);
@@ -79,11 +79,11 @@ const Reports = () => {
     
     doc.setFontSize(10);
     doc.setTextColor(80);
-    doc.text(`Organization: Acme Corporation`, 20, 55);
-    doc.text(`Organization ID: ORG-2024-001`, 20, 62);
-    doc.text(`Industry: Manufacturing`, 20, 69);
-    doc.text(`Report Period: ${report.dateFrom} to ${report.dateTo}`, 20, 76);
-    doc.text(`Generated: ${new Date().toLocaleDateString()}`, 20, 83);
+    doc.text(`Organización: Telcel`, 20, 55);
+    doc.text(`ID Organización: ORG-2024-001`, 20, 62);
+    doc.text(`Industria: Manufactura`, 20, 69);
+    doc.text(`Periodo reportado: ${report.dateFrom} to ${report.dateTo}`, 20, 76);
+    doc.text(`Generado: ${new Date().toLocaleDateString()}`, 20, 83);
 
     // Summary Box
     doc.setDrawColor(200);
@@ -104,13 +104,13 @@ const Reports = () => {
     // Sample emissions table
     autoTable(doc, {
       startY: 135,
-      head: [["Sector", "Activity", "Fuel Type", "Volume", "Unit", "CO₂ (t)", "CH₄ (kg)", "N₂O (kg)"]],
+      head: [["Sector", "Actividad", "Tipo de combustible", "Volumen", "Unidad", "CO₂ (t)", "CH₄ (kg)", "N₂O (kg)"]],
       body: [
-        ["Transport", "Fleet Operations", "Diesel", "15,000", "L", "40.20", "1.80", "0.30"],
-        ["Manufacturing", "Production Line A", "Natural Gas", "8,500", "m³", "16.07", "0.09", "0.09"],
-        ["Facilities", "Building Heat", "Natural Gas", "12,300", "m³", "23.25", "0.12", "0.12"],
-        ["Transport", "Delivery Vehicles", "Gasoline", "9,200", "L", "21.25", "0.92", "0.18"],
-        ["Facilities", "Office Electricity", "Electricity", "45,000", "kWh", "18.90", "0.45", "0.23"],
+        ["Transporte", "Operaciones de flotilla", "Disel", "15,000", "L", "40.20", "1.80", "0.30"],
+        ["Manufactura", "Linea de producción A", "Gas ", "8,500", "m³", "16.07", "0.09", "0.09"],
+        ["Construcción", "Calefacción", "Gas Natura", "12,300", "m³", "23.25", "0.12", "0.12"],
+        ["Transporte", "Vehiculos de entrega", "Gasolina", "9,200", "L", "21.25", "0.92", "0.18"],
+        ["Construcción", "Electricidad de oficina", "Electriciidad", "45,000", "kWh", "18.90", "0.45", "0.23"],
       ],
       styles: { fontSize: 9 },
       headStyles: { fillColor: [45, 95, 85] },
@@ -135,7 +135,7 @@ const Reports = () => {
     
     toast({
       title: "PDF Generated",
-      description: `${report.name} has been downloaded`,
+      description: `${report.name} Ha sido descargado`,
     });
   };
 
@@ -145,7 +145,7 @@ const Reports = () => {
         <div>
           <h1 className="page-title">Reports</h1>
           <p className="page-description">
-            Generate and export emissions reports for compliance
+            Generar y exportar reporte de cumplimiento de emisiones
           </p>
         </div>
         <Button>

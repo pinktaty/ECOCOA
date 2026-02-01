@@ -10,10 +10,10 @@ import {
 } from "recharts";
 
 const data = [
-  { month: "Jan", CO2: 4200, CH4: 85, N2O: 12 },
+  { month: "Ene", CO2: 4200, CH4: 85, N2O: 12 },
   { month: "Feb", CO2: 3800, CH4: 78, N2O: 10 },
   { month: "Mar", CO2: 4500, CH4: 92, N2O: 14 },
-  { month: "Apr", CO2: 4100, CH4: 81, N2O: 11 },
+  { month: "Abr", CO2: 4100, CH4: 81, N2O: 11 },
   { month: "May", CO2: 3600, CH4: 72, N2O: 9 },
   { month: "Jun", CO2: 3900, CH4: 79, N2O: 10 },
 ];

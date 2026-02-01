@@ -174,10 +174,10 @@ Formato: Usa markdown con títulos (##), subtítulos (###), negritas (**texto**)
           <div>
             <CardTitle className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-primary" />
-              AI Emissions Consultant
+              Consultor de Emisiones con IA
             </CardTitle>
             <CardDescription>
-              Get AI-powered recommendations for reducing your CO₂ emissions
+          Obtenga recomendaciones impulsadas por IA para reducir sus emisiones de CO₂
             </CardDescription>
           </div>
           <Button
@@ -203,7 +203,7 @@ Formato: Usa markdown con títulos (##), subtítulos (###), negritas (**texto**)
           {!hasData && (
               <div className="flex items-center gap-2 text-muted-foreground p-4 bg-muted/50 rounded-lg">
                 <AlertCircle className="h-4 w-4" />
-                <span>Upload atmospheric emissions data to enable AI analysis.</span>
+                <span>Cargar datos de emisiones atmosféricas para permitir el análisis de IA.</span>
               </div>
           )}
 
@@ -218,7 +218,7 @@ Formato: Usa markdown con títulos (##), subtítulos (###), negritas (**texto**)
               <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
                 <CollapsibleTrigger asChild>
                   <Button variant="ghost" className="w-full justify-between mb-4">
-                    <span className="font-semibold">AI Recommendations</span>
+                    <span className="font-semibold">Recomendaciones de IA</span>
                     {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                   </Button>
                 </CollapsibleTrigger>
@@ -226,15 +226,15 @@ Formato: Usa markdown con títulos (##), subtítulos (###), negritas (**texto**)
                   {dataSummary && (
                       <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
                         <div className="text-center">
-                          <p className="text-sm text-muted-foreground">Fixed Sources</p>
+                          <p className="text-sm text-muted-foreground">Fuentes Fijas</p>
                           <p className="text-lg font-bold text-primary">{dataSummary.fixedTotals.co2.toFixed(2)} t CO₂</p>
                         </div>
                         <div className="text-center">
-                          <p className="text-sm text-muted-foreground">Mobile Sources</p>
+                          <p className="text-sm text-muted-foreground">Fuentes Moviles</p>
                           <p className="text-lg font-bold text-primary">{dataSummary.mobileTotals.ghg.toFixed(2)} t CO₂e</p>
                         </div>
                         <div className="text-center">
-                          <p className="text-sm text-muted-foreground">Fugitive Emissions</p>
+                          <p className="text-sm text-muted-foreground">Emisiones fugitivas</p>
                           <p className="text-lg font-bold text-primary">{dataSummary.fugitiveTotals.quantity.toFixed(2)} kg</p>
                         </div>
                       </div>

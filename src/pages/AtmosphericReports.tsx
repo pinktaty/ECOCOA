@@ -158,9 +158,9 @@ const AtmosphericReports = () => {
     return (
       <div className="animate-fade-in">
         <div className="page-header">
-          <h1 className="page-title">Atmospheric Emissions Reports</h1>
+          <h1 className="page-title">Informes de emisiones atmosféricas</h1>
           <p className="page-description">
-            RENE Section II - Fixed Sources, Mobile Sources, and Fugitive Emissions
+              Sección II de la RENE - Fuentes fijas, fuentes móviles y emisiones fugitivas
           </p>
         </div>
         
@@ -168,7 +168,7 @@ const AtmosphericReports = () => {
           <AlertCircle className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
           <h3 className="text-lg font-semibold mb-2">No Data Available</h3>
           <p className="text-muted-foreground mb-4">
-            Upload atmospheric emissions data to generate reports
+            Cargar datos de emisiones atmosféricas para generar informes
           </p>
           <Button variant="outline" onClick={() => window.location.href = "/upload-atmospheric"}>
             Upload Data
@@ -182,9 +182,9 @@ const AtmosphericReports = () => {
     <div className="animate-fade-in">
       <div className="page-header flex items-center justify-between">
         <div>
-          <h1 className="page-title">Atmospheric Emissions Reports</h1>
+          <h1 className="page-title">Informes de emisiones atmosféricas</h1>
           <p className="page-description">
-            RENE Section II - Fixed Sources, Mobile Sources, and Fugitive Emissions
+            Sección II de la RENE - Fuentes fijas, fuentes móviles y emisiones fugitivas
           </p>
         </div>
         <div className="flex gap-2">
@@ -210,9 +210,9 @@ const AtmosphericReports = () => {
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="grid w-full grid-cols-3 mb-6">
-          <TabsTrigger value="fixed">3.1 Fixed Sources</TabsTrigger>
-          <TabsTrigger value="mobile">3.2 Mobile Sources</TabsTrigger>
-          <TabsTrigger value="fugitive">3.3 Fugitive Emissions</TabsTrigger>
+          <TabsTrigger value="fixed">3.1 Fuentes Fijas</TabsTrigger>
+          <TabsTrigger value="mobile">3.2 Fuentes Móviles</TabsTrigger>
+          <TabsTrigger value="fugitive">3.3 Emisiones Fugitivas</TabsTrigger>
         </TabsList>
 
         {/* Fixed Sources */}
@@ -222,10 +222,10 @@ const AtmosphericReports = () => {
               <Filter className="h-4 w-4 text-muted-foreground" />
               <Select value={fixedFilter} onValueChange={setFixedFilter}>
                 <SelectTrigger className="w-48">
-                  <SelectValue placeholder="Filter by Equipment Type" />
+                  <SelectValue placeholder="Filtrar por tipo de equipo" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Equipment Types</SelectItem>
+                  <SelectItem value="all">Todos los tipos de equipo</SelectItem>
                   {EQUIPMENT_TYPES.map((type) => (
                     <SelectItem key={type} value={type}>{type}</SelectItem>
                   ))}

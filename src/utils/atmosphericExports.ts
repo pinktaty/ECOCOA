@@ -222,7 +222,7 @@ export const exportAtmosphericToWord = (data: AtmosphericEmissionsData, orgName:
     <html>
     <head>
       <meta charset="utf-8">
-      <title>Atmospheric Emissions Report</title>
+      <title>Atmospheric Reporte de Emisiones</title>
       <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
         h1 { color: #2d504b; }
@@ -240,22 +240,22 @@ export const exportAtmosphericToWord = (data: AtmosphericEmissionsData, orgName:
     <body>
       <div class="header">
         <h1>EmissionTrack</h1>
-        <p class="meta">Atmospheric Emissions Report - RENE Section II</p>
+        <p class="meta">Reporte atmosférico de emisiones - RENE Sección II</p>
         <p><strong>Organization:</strong> ${orgName}</p>
         <p><strong>Generated:</strong> ${new Date().toLocaleDateString()}</p>
       </div>
 
-      <h2>3.1 Fixed Sources</h2>
+      <h2>3.1 Fuentes Fijas</h2>
       <table>
         <tr>
-          <th>Equipment Type</th>
-          <th>Fuel</th>
-          <th>Annual Consumption</th>
-          <th>Operating Hours</th>
-          <th>Estimation Method</th>
-          <th>CO₂ Emissions</th>
-          <th>CH₄ Emissions</th>
-          <th>N₂O Emissions</th>
+          <th>Tipo de equipamento</th>
+          <th>Combustible</th>
+          <th>Consumo Anual</th>
+          <th>Horas operativas</th>
+          <th>Método de estimación</th>
+          <th>Emisiones deCO₂</th>
+          <th>Emisiones de CH₄</th>
+          <th>Emisiones de N₂O</th>
         </tr>
         ${data.fixedSources.map((r) => `
           <tr>
@@ -281,14 +281,14 @@ export const exportAtmosphericToWord = (data: AtmosphericEmissionsData, orgName:
         </tr>
       </table>
 
-      <h2>3.2 Mobile Sources</h2>
+      <h2>3.2 Fuentes móviles</h2>
       <table>
         <tr>
-          <th>Vehicle Type</th>
-          <th>Fuel</th>
-          <th>Annual Consumption</th>
-          <th>Calculation Method</th>
-          <th>GHG Emissions</th>
+          <th>Tipo de vehiculo</th>
+          <th>Combustible</th>
+          <th>Consumo Anual</th>
+          <th>Método de estimación</th>
+          <th>Emisiones de GyGEI</th>
         </tr>
         ${data.mobileSources.map((r) => `
           <tr>
@@ -308,13 +308,13 @@ export const exportAtmosphericToWord = (data: AtmosphericEmissionsData, orgName:
         </tr>
       </table>
 
-      <h2>3.3 Fugitive Emissions</h2>
+      <h2>3.3 Emisiones Fugitivas</h2>
       <table>
         <tr>
-          <th>Gas Type</th>
-          <th>Source</th>
-          <th>Estimated Quantity</th>
-          <th>Methodology</th>
+          <th>Tipo de Gasolina</th>
+          <th>Fuente</th>
+          <th>Cantidad estimada</th>
+          <th>Metodologia</th>
         </tr>
         ${data.fugitiveEmissions.map((r) => `
           <tr>

@@ -33,7 +33,7 @@ const UploadAtmospheric = () => {
     if (result.data) {
       setData(result.data);
       toast({
-        title: "File processed",
+        title: "Archivo procesado",
         description: `Loaded ${result.data.fixedSources.length} fixed sources, ${result.data.mobileSources.length} mobile sources, ${result.data.fugitiveEmissions.length} fugitive emissions`,
       });
     }
@@ -50,7 +50,7 @@ const UploadAtmospheric = () => {
         if (file && (file.name.endsWith(".xlsx") || file.name.endsWith(".xls"))) {
           processFile(file);
         } else {
-          setErrors(["Please upload a valid Excel file (.xlsx or .xls)"]);
+          setErrors(["Favor de subir un archivo Excel válido (.xlsx o .xls)"]);
         }
       },
       [processFile]
@@ -148,9 +148,9 @@ const UploadAtmospheric = () => {
   return (
       <div className="animate-fade-in">
         <div className="page-header">
-          <h1 className="page-title">Upload Atmospheric Emissions</h1>
+          <h1 className="page-title">Subir emisiones atmósfericas</h1>
           <p className="page-description">
-            Upload Excel files with RENE Section II atmospheric emissions data (Fixed Sources, Mobile Sources, Fugitive Emissions)
+            Subir archivos de Excel con RENE Sección II Datos de emisiones atmosféricas (Fuentes Fijas, Fuentes móviles, Fuentes Fugitivas)
           </p>
         </div>
 
@@ -177,13 +177,13 @@ const UploadAtmospheric = () => {
             {isProcessing ? "Processing..." : "Drop your Excel file here"}
           </p>
           <p className="text-sm text-muted-foreground mb-4">
-            or click to browse your files
+            O click para buscar tus archivos
           </p>
           <div className="text-xs text-muted-foreground space-y-1">
             <p className="font-medium">Required sheets:</p>
-            <p>• Fixed Sources (Equipment Type, Fuel, Annual Consumption, Operating Hours, etc.)</p>
-            <p>• Mobile Sources (Vehicle Type, Fuel, Annual Consumption, Calculation Method, GHG Emissions)</p>
-            <p>• Fugitive Emissions (Gas Type, Source, Estimated Quantity, Methodology)</p>
+            <p>• Fuentes Fijas (Tipo de equipo, Combustible, Consumo Anual, Horas Operativas, etc.)</p>
+            <p>• Fuentes Móviles (Tipo de Vehículo, Combustible, Consumo Anual, Método para Calcular, Emisiones GyGEI)</p>
+            <p>• Emisiones fugitivas (Tipo de gasolina, Fuente, Cantidad Estimada, Metodologia)</p>
           </div>
         </div>
 
@@ -192,7 +192,7 @@ const UploadAtmospheric = () => {
             <div className="mb-6 rounded-lg border border-destructive/50 bg-destructive/5 p-4">
               <div className="flex items-center gap-2 text-destructive mb-2">
                 <AlertCircle className="h-5 w-5" />
-                <span className="font-medium">Validation Errors</span>
+                <span className="font-medium">Errores de validación</span>
               </div>
               <ul className="list-disc list-inside text-sm text-destructive/90 space-y-1">
                 {errors.map((error, i) => (
@@ -208,7 +208,7 @@ const UploadAtmospheric = () => {
               <div className="flex items-center justify-between border-b px-6 py-4">
                 <div className="flex items-center gap-2 text-success">
                   <CheckCircle className="h-5 w-5" />
-                  <span className="font-medium">Data loaded - Review and edit before saving</span>
+                  <span className="font-medium">Datos cargados - Revisar y editar antes de entregar</span>
                 </div>
                 <div className="flex gap-3">
                   <Button variant="outline" onClick={clearAll}>
