@@ -6,13 +6,17 @@ import {
   Settings,
   Leaf,
   LogOut,
+  Wind,
+  BarChart3,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "Upload Data", href: "/upload", icon: Upload },
+  { name: "Upload Atmospheric", href: "/upload-atmospheric", icon: Wind },
   { name: "Reports", href: "/reports", icon: FileText },
+  { name: "Atmospheric Reports", href: "/atmospheric-reports", icon: BarChart3 },
   { name: "Settings", href: "/settings", icon: Settings },
 ];
 
