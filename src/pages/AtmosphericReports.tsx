@@ -12,6 +12,7 @@ import { exportAtmosphericToPDF, exportAtmosphericToExcel, exportAtmosphericToWo
 import { AIConsultant } from "@/components/atmospheric/AIConsultant";
 import type { FixedSourceRecord, MobileSourceRecord, FugitiveEmissionRecord } from "@/types/atmosphericEmissions";
 import { EQUIPMENT_TYPES, FUGITIVE_SOURCES } from "@/types/atmosphericEmissions";
+import {AtmosphericDataProvider} from "@/contexts/AtmosphericDataContext.tsx";
 
 type SortField = string;
 type SortDirection = "asc" | "desc";
@@ -203,7 +204,9 @@ const AtmosphericReports = () => {
       </div>
 
       {/* AI Consultant Section */}
-      <AIConsultant data={data} />
+      <AtmosphericDataProvider>
+        {<AIConsultant data={data} />}
+      </AtmosphericDataProvider>
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="grid w-full grid-cols-3 mb-6">

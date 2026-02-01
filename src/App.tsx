@@ -11,6 +11,7 @@ import Reports from "./pages/Reports";
 import AtmosphericReports from "./pages/AtmosphericReports";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import {AtmosphericDataProvider} from "@/contexts/AtmosphericDataContext.tsx";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AtmosphericDataProvider>
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Dashboard />} />
@@ -31,6 +33,7 @@ const App = () => (
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </AtmosphericDataProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
