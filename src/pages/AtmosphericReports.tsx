@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useAtmosphericEmissions } from "@/hooks/useAtmosphericEmissions";
 import { exportAtmosphericToPDF, exportAtmosphericToExcel, exportAtmosphericToWord } from "@/utils/atmosphericExports";
+import { AIConsultant } from "@/components/atmospheric/AIConsultant";
 import type { FixedSourceRecord, MobileSourceRecord, FugitiveEmissionRecord } from "@/types/atmosphericEmissions";
 import { EQUIPMENT_TYPES, FUGITIVE_SOURCES } from "@/types/atmosphericEmissions";
 
@@ -200,6 +201,9 @@ const AtmosphericReports = () => {
           </Button>
         </div>
       </div>
+
+      {/* AI Consultant Section */}
+      <AIConsultant data={data} />
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="grid w-full grid-cols-3 mb-6">
