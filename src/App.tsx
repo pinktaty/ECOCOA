@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "@/components/layout/AppLayout";
 import Dashboard from "./pages/Dashboard";
 import UploadData from "./pages/UploadData";
+import UploadAtmospheric from "./pages/UploadAtmospheric";
 import Reports from "./pages/Reports";
+import AtmosphericReports from "./pages/AtmosphericReports";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -22,7 +24,9 @@ const App = () => (
           <Route element={<AppLayout />}>
             <Route path="/" element={<Dashboard />} />
             <Route path="/upload" element={<UploadData />} />
+            <Route path="/upload-atmospheric" element={<UploadAtmospheric />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path="/atmospheric-reports" element={<AtmosphericReports />} />
             <Route path="/settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />
